@@ -24,9 +24,9 @@ module.exports.getAuthURL = async () => {
   return {
     statusCode: 200,
     headers: {
-        'Access-Control-Allow-Origin': '*',
-        'Access-Control-Allow-Credentials': true,
-       },
+      'Access-Control-Allow-Origin': '*',
+      'Access-Control-Allow-Credentials': true,
+    },
     body: JSON.stringify({
       authUrl,
     }),
@@ -57,9 +57,9 @@ module.exports.getAccessToken = async (event) => {
     return {
         statusCode: 200,
         headers: {
-            'Access-Control-Allow-Origin': '*',
-            'Access-Control-Allow-Credentials': true,
-           },
+          'Access-Control-Allow-Origin': '*',
+          'Access-Control-Allow-Credentials': true,
+         },
         body: JSON.stringify(results),
     };
     })
@@ -69,7 +69,7 @@ module.exports.getAccessToken = async (event) => {
         statusCode: 500,
         body: JSON.stringify(error),
     };
-    });
+  });
 };
 
 module.exports.getCalendarEvents = async (event) => {
@@ -97,9 +97,9 @@ module.exports.getCalendarEvents = async (event) => {
     return {
         statusCode: 200,
         headers: {
-        'Access-Control-Allow-Origin': '*',
-        'Access-Control-Allow-Credentials': true,
-        },
+          'Access-Control-Allow-Origin': '*',
+          'Access-Control-Allow-Credentials': true,
+         },
         body: JSON.stringify({ events: results.data.items }),
     };
     })
@@ -108,5 +108,5 @@ module.exports.getCalendarEvents = async (event) => {
         statusCode: 500,
         body: JSON.stringify(error),
     };
-    });
+  });
 }
