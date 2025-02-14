@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import './index.css'
 import * as atatus from 'atatus-spa';
+import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 
 atatus.config('c1f588e3cb564d56a9853f9bfe561852').install();
 ReactDOM.createRoot(document.getElementById('root')).render(
@@ -10,3 +11,4 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <App />
   </React.StrictMode>,
 )
+serviceWorkerRegistration.register();
