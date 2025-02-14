@@ -15,4 +15,25 @@ console.error = (...args) => {
     if (!ignoreMessage) originalError(...args);
 }
 
+if (typeof window !== "undefined") {
+    const { ResizeObserver } = window;
+  
+    beforeEach(() => {
+      // Mock ResizeObserver for testing
+      //@ts-ignore
+      delete window.ResizeObserver;
+      window.ResizeObserver = jest.fn().mockImplementation(() => ({
+        observe: jest.fn(),
+        unobserve: jest.fn(),
+        disconnect: jest.fn(),
+      }));
+    });
+  
+    afterEach(() => {
+      // Restore the original ResizeObserver after tests
+      window.ResizeObserver = ResizeObserver;
+      jest.restoreAllMocks();
+    });
+}
+
 jest.setTimeout(50000);

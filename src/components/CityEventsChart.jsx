@@ -1,5 +1,4 @@
-import { useState, useEffect } from 'react';
-import PropsType from 'prop-types';
+import React, { useState, useEffect } from 'react';
 import {
   ScatterChart,
   Scatter,
