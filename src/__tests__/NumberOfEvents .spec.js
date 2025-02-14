@@ -10,6 +10,7 @@ describe('<NumberOfEvents /> component', () => {
             <NumberOfEvents 
                 numberOfEvents={32} 
                 setNumberOfEvents={() => {}}
+                setErrorAlert={() => {}}
         />
         );
     });
@@ -18,10 +19,12 @@ describe('<NumberOfEvents /> component', () => {
         const numberOfEvents = NumberOfEventsDOM.queryByRole('textbox');
         expect(numberOfEvents).toBeInTheDocument();
     });
-    test('o ensure that the default value of the input field is 32.', () => {
+
+    test('to ensure that the default value of the input field is 32.', () => {
         const numberOfEvents = NumberOfEventsDOM.queryByRole('textbox');
         expect(numberOfEvents.value).toBe('32');
     });
+
     test('the value of the NumberOfEvents component’s textbox changes accordingly when a user types in it within App', async () => {
         render(<App />);
         const numberOfEvents = screen.queryAllByTestId('number-of-events-input');
