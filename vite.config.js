@@ -44,10 +44,10 @@ export default defineConfig({
             "form_factor": "wide"
         },
         {
-          "src": "/screenshot-800x1280.png",
-          "sizes": "800x1280",
+          "src": "/screenshot.png",
+          "sizes": "1280x800",
           "type": "image/png"
-        }
+        },
       ],
       "start_url": ".",
       "display": "standalone",
