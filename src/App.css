@@ -2,7 +2,6 @@
 .App {
   text-align: center;
   padding: 2% 5%;
-  width: 1000px;
 }
 
 .App * {
@@ -103,6 +102,12 @@ input[type="number"] {
   justify-content: center;
   padding: 1rem;
   margin-bottom: 0.8rem;
+}
+
+@media (max-width: 1024px) {
+  .city-events-charts {
+  max-width: 50%;
+  }
 }
 
 @media (max-width: 768px) {
