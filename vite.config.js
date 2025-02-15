@@ -36,6 +36,19 @@ export default defineConfig({
           "purpose": "maskable"
           }
       ],
+      "screenshots": [
+        {
+            "src": "screenshot.png",
+            "sizes": "1280x800",
+            "type": "image/png",
+            "form_factor": "wide"
+        },
+        {
+          "src": "/screenshot-800x1280.png",
+          "sizes": "800x1280",
+          "type": "image/png"
+        }
+      ],
       "start_url": ".",
       "display": "standalone",
       "theme_color": "#000000",
